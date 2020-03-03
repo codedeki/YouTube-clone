@@ -1,0 +1,153 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#pageContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+#mastHeadContainer {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 7px 16px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+#mastHeadContainer button:not(.searchButton), 
+#mastHeadContainer .userIcons img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+}
+#mastHeadContainer .userIcons {
+    height: 100%;
+}
+
+#mastHeadContainer button img {
+  width: 100%;
+}
+
+#mastHeadContainer .logoContainer {
+    width: 150px;
+}
+
+#mastHeadContainer .logoContainer img {
+    height: 25px;
+    margin-left: 8px;
+
+}
+
+#mastHeadContainer .searchBarContainer {
+    margin: 0 40px;
+    flex: 1;
+    display: flex;
+}
+
+#mastHeadContainer .searchBarContainer form {
+    flex: 1;
+    display: flex;
+} 
+
+#mastHeadContainer .searchBarContainer .searchButton {
+    height: 38px;
+    background-color: #f8f8f8;
+    border: 1px solid #d3d3d3;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    cursor: pointer;
+    width: 35px;
+
+} 
+
+#mastHeadContainer .searchBarContainer img {
+    height: 20px;
+    width: 20px;
+} 
+
+#mastHeadContainer .searchBarContainer .searchBar {
+    flex: 1;
+    max-width: 600px;
+    color: #111;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-right: none;
+    height: 32px;
+    box-shadow: #eee 0px 1px 2px 0px inset;;
+} 
+
+#sideNavContainer {
+    width: 240px;
+    background-color: #f5f5f5;
+    padding-top: 56px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#mainSectionContainer {
+    padding-top: 56px;
+    display: flex;
+}
+#mainSectionContainer.leftPadding {
+    padding-left: 240px;
+}
+
+#mainContentContainer {
+    padding: 10px 30px;
+    display: flex;
+    flex: 1;
+}
+
+/* UPLOAD.PHP STYLES */
+
+.column {
+    flex: 1;
+    display: flex;
+    background-color: #fff;
+    min-height: 300px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2px) 0 1px 2px;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
