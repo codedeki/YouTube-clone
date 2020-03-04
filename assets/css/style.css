@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-a {
+a:hover {
     text-decoration: none;
 }
 
@@ -70,13 +70,13 @@ a {
 } 
 
 #mastHeadContainer .searchBarContainer .searchButton {
-    height: 38px;
+    height: 32px;
     background-color: #f8f8f8;
     border: 1px solid #d3d3d3;
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
     cursor: pointer;
-    width: 35px;
+    width: 32px;
 
 } 
 
@@ -122,32 +122,18 @@ a {
 
 #mainContentContainer {
     padding: 10px 30px;
-    display: flex;
     flex: 1;
 }
 
 /* UPLOAD.PHP STYLES */
 
 .column {
-    flex: 1;
-    display: flex;
     background-color: #fff;
     min-height: 300px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.2px) 0 1px 2px;
 }
 
-
-.form-control {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+.form-group textarea {
+    resize: none;
 }
