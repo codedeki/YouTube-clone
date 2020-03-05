@@ -28,19 +28,19 @@ class VideoDetailsFormProvider {
     private function createFileInput() {
         return "<div class='form-group'>
                     <label for='example'>Upload your file: </label>
-                    <input type='file' class='form-control-file' id='example' name='fileInput'>
+                    <input type='file' class='form-control-file' id='example' name='fileInput' required>
                 </div>";
     }
 
     private function createTitleInput() {
         return "<div class='form-group'>
-                    <input class='form-control' type='text' placeholder='title' name='titleInput'>
+                    <input class='form-control' type='text' placeholder='Title' name='titleInput'>
                 </div>";
     }
 
     private function createDescriptionInput() {
         return "<div class='form-group'>
-                    <textarea class='form-control' placeholder='Description' name='descriptionInput'></textarea>
+                    <textarea class='form-control' placeholder='Description' name='descriptionInput' rows='3'></textarea>
                 </div>";
         
     }
@@ -49,8 +49,7 @@ class VideoDetailsFormProvider {
         return "<div class='form-group'>
                     <select class='form-control' name='privacyInput'>
                         <option value='0'>Private</option>
-                        <option value='1'>Public</optionvalue='0'>
-        
+                        <option value='1'>Public</option>
                     </select>
                 </div>";
     }
@@ -77,7 +76,7 @@ class VideoDetailsFormProvider {
     }
 
     private function createUploadButton() {
-        return "<button type ='submit' class='btn btn-primary' name='uploadButton' id='uploadBtn'>Upload</button>";
+        return "<button type ='submit' class='btn btn-primary' name='uploadButton'>Upload</button>";
     }
 }
 
