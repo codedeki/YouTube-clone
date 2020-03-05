@@ -77,7 +77,7 @@ class VideoDetailsFormProvider {
     }
 
     private function createUploadButton() {
-        return "<button type ='submit' class='btn btn-primary' name='uploadButton'>Upload</button>";
+        return "<button type ='submit' class='btn btn-primary' name='uploadButton' id='uploadBtn'>Upload</button>";
     }
 }
 

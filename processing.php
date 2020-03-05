@@ -23,5 +23,8 @@ $videoUploadData = new VideoUploadData(
 $videoProcessor = new VideoProcessor($con); //$con comes form header file-> config.php
 $wasSuccessful = $videoProcessor->upload($videoUploadData);
 // 3. check if upload was successful
+if ($wasSuccessful) {
+    echo "Upload successful";
+}
 
 ?>
