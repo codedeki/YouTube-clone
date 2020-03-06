@@ -76,7 +76,7 @@ a:hover {
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
     cursor: pointer;
-    width: 32px;
+    width: 65px; 
 
 } 
 
@@ -122,12 +122,14 @@ a:hover {
 
 #mainContentContainer {
     padding: 10px 30px;
+    display: flex;
     flex: 1;
 }
 
 /* UPLOAD.PHP STYLES -------------------------------------------------------------*/
 
 .column {
+    flex-grow: 1;
     background-color: #fff;
     min-height: 300px;
     padding: 20px;
@@ -215,4 +217,21 @@ a:hover {
     font-size: 14px;
     font-weight: 400;
     text-align: center;
+}
+
+/* Video Player STYLES -------------------------------------------------------------*/
+
+.watchLeftColumn {
+    flex: 1;
+}
+
+.watchLeftColumn .videoPlayer {
+    width: 100%;
+}
+
+.suggestions {
+    max-width: 425px;
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 24px;
 }
