@@ -47,7 +47,7 @@ class VideoInfoControls {
 
         $imageSrc = "assets/images/icons/thumb-down.png";
 
-        //Show correct img if video has been liked already
+        //Show correct img if video has been disliked already
         if ($this->video->wasDislikedBy()) {
             $imageSrc = "assets/images/icons/thumb-down-active.png";
         }
