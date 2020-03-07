@@ -8,3 +8,7 @@ const sideNav = document.getElementById('sideNavContainer');
 navButton.addEventListener('click', function() {
     mainSection.classList.toggle('leftPadding');
 });
+
+function notSignedIn() {
+    alert("You must be signed in to perform this action.");
+}
