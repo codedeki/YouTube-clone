@@ -40,7 +40,7 @@ class User {
     }
 
     public function getProfilePic() {
-        return $this->sqlData["profilePic"];
+        return User::isLoggedIn() ? $this->sqlData["profilePic"] : "";
     }
 
     public function getSignUpDate() {
