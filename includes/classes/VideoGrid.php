@@ -62,7 +62,34 @@ class VideoGrid {
 
     public function createGridHeader($title, $showFilter) {
         $filter = "";
-        //create filter
+        
+        if ($showFilter) {
+            $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            
+            $urlArray = parse_url($link);
+            $query = $urlArray["query"];
+
+            parse_str($query, $params);
+
+            
+            unset($params["orderBy"]); //create new tag in link
+            
+            $newQuery = http_build_query($params);
+
+            $newUrl = basename($_SERVER["PHP_SELF"]) . "?" . $newQuery; //whatever user passes into search is $newUrl
+            //get base url
+            //filter search by upload date and view count
+            $filter = "<div class='right'>
+                            <span>Order By:</span>
+                            <a href='$newUrl&orderBy=uploadDate'>Upload date</a>
+                            <a href='$newUrl&orderBy=views'>Most viewed</a>
+                        </div>";
+            
+            //e.g. if search term = seal, the output will be:
+            //e.g. youtube/search.php?term=seal&orderBy=views
+            //e.g. youtube/search.php?term=seal&orderBy=uploadDate    
+
+        }
 
         return "<div class='videoGridHeader'>
                     <div class='left'>
@@ -70,6 +97,12 @@ class VideoGrid {
                     </div>
                         $filter
                 </div>";
+    }
+
+    public function createLarge($videos, $title, $showFilter) {
+        $this->gridClass .= " large";
+        $this->largeMode = true;
+        return $this->create($videos, $title, $showFilter);
     }
 }
 
