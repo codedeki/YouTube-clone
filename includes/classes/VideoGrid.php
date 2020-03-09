@@ -17,7 +17,7 @@ class VideoGrid {
             $gridItems = $this->generateItems();
         } 
         else {
-            $gridItems = $this->generateItemsFromVideos();
+            $gridItems = $this->generateItemsFromVideos($videos);
 
         }
 
@@ -27,7 +27,8 @@ class VideoGrid {
             $header = $this->createGridHeader($title, $showFilter); 
         }
         
-        return "<div class='$this->gridClass'>
+        return "$header
+                <div class='$this->gridClass'>
                 $gridItems
                 </div>";
     }
@@ -48,12 +49,27 @@ class VideoGrid {
         return $elementsHTML;
     }
 
-    public function generateItemsFromVideos() {
+    public function generateItemsFromVideos($videos) {
+        $elementsHTML = "";
 
+        foreach ($videos as $video) {
+            $item = new VideoGridItem($video, $this->largeMode);
+            $elementsHTML .= $item->create();
+        }
+
+        return $elementsHTML;
     }
 
-    public function createGridHeader() {
-        return "";
+    public function createGridHeader($title, $showFilter) {
+        $filter = "";
+        //create filter
+
+        return "<div class='videoGridHeader'>
+                    <div class='left'>
+                        $title
+                    </div>
+                        $filter
+                </div>";
     }
 }
 
