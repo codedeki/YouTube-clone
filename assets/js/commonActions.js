@@ -7,6 +7,7 @@ const sideNav = document.getElementById('sideNavContainer');
 //DOM events
 navButton.addEventListener('click', function() {
     mainSection.classList.toggle('leftPadding');
+    sideNav.classList.toggle('invisible');
 });
 
 function notSignedIn() {
